@@ -25,6 +25,8 @@ Read link: https://www.datacamp.com/blog/data-scientist-interview-questions
 
 9. [How can you avoid overfitting your model?](#q9)
 
+10. [How can you avoid overfitting your model?](#q10)
+
 ---
 
 # Answers
