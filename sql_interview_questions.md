@@ -22,9 +22,9 @@
 
 11. [Find NULL values](#q11)
 
-12. [Remove duplicates (concept question)](#q12)
+12. [Remove duplicates](#q12)
 
-13. [Second highest salary ⭐ VERY IMPORTANT](#q13)
+13. [Second highest salary ](#q13)
 
 14. [Top 5 highest salaries](#q14)
 
@@ -39,6 +39,10 @@
 19. [Employees with salary between range](#q19)
 
 20. [Find duplicates in a column](#q20)
+
+21. [Write a solution to find the employees who earn more than their managers.](#q21)
+   
+22. [ Write a solution to delete all duplicate emails, keeping only one unique email with the smallest id.](#q22)
 
 ---
 
@@ -169,7 +173,7 @@ WHERE salary IS NULL;
 
 <a id="q12"></a>
 
-## 12. Remove duplicates (concept question)
+## 12. Remove duplicates 
 
 ```sql
 SELECT DISTINCT department FROM employees;
@@ -179,12 +183,14 @@ SELECT DISTINCT department FROM employees;
 
 <a id="q13"></a>
 
-## 13. Second highest salary ⭐ VERY IMPORTANT
+## 13. Write a solution to find the second highest distinct salary from the Employee table. If there is no second highest salary, return null
 
 ```sql
-SELECT MAX(salary)
-FROM employees
-WHERE salary < (SELECT MAX(salary) FROM employees);
+select max(salary) as  SecondHighestSalary
+from Employee
+where salary<(select max(salary) 
+              from Employee);
+#MAX() returns NULL if there is no 2nd higest salary
 ```
 
 ---
@@ -267,4 +273,20 @@ SELECT name, COUNT(*)
 FROM employees
 GROUP BY name
 HAVING COUNT(*) > 1;
+```
+## 21. Write a solution to find the employees who earn more than their managers.
+
+```sql
+select e.name as Employee
+from Employee e join Employee m 
+on e.managerID= m.managerID
+where e.salary> m.salary()
+```
+## 22. Write a solution to delete all duplicate emails, keeping only one unique email with the smallest id.
+
+```sql
+delete p2
+from person p1, person p2
+where p1.email= p2.email 
+      and p1.id<p2.id;
 ```
