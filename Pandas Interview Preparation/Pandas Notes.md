@@ -6,7 +6,7 @@
 
 1. [What is Pandas?](#q1)
 
-2. [What is a DataFrame?](#q2)
+2. [What is a Series and DataFrame?](#q2)
 
 3. [What does head() do?](#q3)
 
@@ -31,9 +31,6 @@
 13. [Summary Table — All Functions](#q13)
 
 14. [Exam Ready Answers](#q14)
-
-15. [Quick Cheat Sheet](#q15)
-
 ---
 
 # Answers
@@ -53,10 +50,11 @@ Pandas is a Python library used for loading, exploring, cleaning and manipulatin
 
 <a id="q2"></a>
 
-## 2. What is a DataFrame?
+## 2. What is a Series and DataFrame?
 
 ```text
 Definition:
+A Series is a one-dimensional labeled data structure.
 A DataFrame is a 2D table with rows and columns —
 
 Example:
@@ -66,6 +64,7 @@ N    P    K    Crop
 60   55   44   Wheat
 
 That table = DataFrame
+
 ```
 
 ---
@@ -331,14 +330,27 @@ df['loan_amount'].mean()
 
 <a id="q14"></a>
 
-## 14. Exam Ready Answers
-
 ### Q: What is Pandas?
 
 > "Pandas is a Python library for data manipulation and analysis. It provides a DataFrame structure similar to a spreadsheet that allows loading, cleaning, filtering and analyzing structured data."
 
 ---
+### Q: What is EDA?
 
+> "EDA (Exploratory Data Analysis) is the process of analyzing and understanding a dataset using statistics and visualizations before building machine learning models."
+---
+
+### Q: How to read and save csv file?
+
+> "read: pd.read_csv("data.csv")
+>  save: df.to_csv("output.csv")"
+---
+
+### Q: Difference Between merge() and concat()?
+
+> "merge() combines DataFrames using common columns,
+> while concat() joins DataFrames vertically or horizontally."
+---
 ### Q: What does head() do?
 
 > "df.head() shows the first 5 rows of a DataFrame. It is the first thing a data scientist does when exploring a new dataset to quickly understand its structure."
