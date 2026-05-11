@@ -138,7 +138,7 @@ LIST (Python built-in)
 
 ARRAY (NumPy)
 → Only one data type
-→ [1, 2, 3, 4, 5]
+→ [1, 2, 3, 4, 5] 
 → Faster for math operations
 → Supports math directly
 ```
@@ -149,7 +149,7 @@ Example:
 list = [1, 2, 3]
 
 list * 2
-# [1,2,3,1,2,3]
+# [1,2,3,1,2,3] not possible
 
 array = np.array([1, 2, 3])
 
